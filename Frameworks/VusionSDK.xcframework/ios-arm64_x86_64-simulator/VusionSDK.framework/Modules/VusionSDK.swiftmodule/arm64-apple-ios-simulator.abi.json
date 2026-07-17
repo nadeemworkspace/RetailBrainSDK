@@ -1,0 +1,5406 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "VusionSDK",
+    "printedName": "VusionSDK",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BeaconNeighbour",
+        "printedName": "BeaconNeighbour",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(key:beacons:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BeaconNeighbour",
+                "printedName": "VusionSDK.BeaconNeighbour",
+                "usr": "s:9VusionSDK15BeaconNeighbourV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK15BeaconNeighbourV3key7beaconsACSS_SaySSGtcfc",
+            "mangledName": "$s9VusionSDK15BeaconNeighbourV3key7beaconsACSS_SaySSGtcfc",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "equals",
+            "printedName": "equals(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BeaconNeighbour",
+                "printedName": "VusionSDK.BeaconNeighbour",
+                "usr": "s:9VusionSDK15BeaconNeighbourV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK15BeaconNeighbourV6equalsySbACF",
+            "mangledName": "$s9VusionSDK15BeaconNeighbourV6equalsySbACF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9VusionSDK15BeaconNeighbourV",
+        "mangledName": "$s9VusionSDK15BeaconNeighbourV",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Neighbour",
+        "printedName": "Neighbour",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(deviceId:shelf:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Neighbour",
+                "printedName": "VusionSDK.Neighbour",
+                "usr": "s:9VusionSDK9NeighbourV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK9NeighbourV8deviceId5shelfACSS_SStcfc",
+            "mangledName": "$s9VusionSDK9NeighbourV8deviceId5shelfACSS_SStcfc",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9VusionSDK9NeighbourV",
+        "mangledName": "$s9VusionSDK9NeighbourV",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Item",
+        "printedName": "Item",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "deviceId",
+            "printedName": "deviceId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK4ItemV8deviceIdSSvp",
+            "mangledName": "$s9VusionSDK4ItemV8deviceIdSSvp",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK4ItemV8deviceIdSSvg",
+                "mangledName": "$s9VusionSDK4ItemV8deviceIdSSvg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK4ItemV8deviceIdSSvs",
+                "mangledName": "$s9VusionSDK4ItemV8deviceIdSSvs",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK4ItemV8deviceIdSSvM",
+                "mangledName": "$s9VusionSDK4ItemV8deviceIdSSvM",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rssi",
+            "printedName": "rssi",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK4ItemV4rssiSivp",
+            "mangledName": "$s9VusionSDK4ItemV4rssiSivp",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK4ItemV4rssiSivg",
+                "mangledName": "$s9VusionSDK4ItemV4rssiSivg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK4ItemV4rssiSivs",
+                "mangledName": "$s9VusionSDK4ItemV4rssiSivs",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK4ItemV4rssiSivM",
+                "mangledName": "$s9VusionSDK4ItemV4rssiSivM",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "position",
+            "printedName": "position",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK4ItemV8positionSSvp",
+            "mangledName": "$s9VusionSDK4ItemV8positionSSvp",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK4ItemV8positionSSvg",
+                "mangledName": "$s9VusionSDK4ItemV8positionSSvg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK4ItemV8positionSSvs",
+                "mangledName": "$s9VusionSDK4ItemV8positionSSvs",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK4ItemV8positionSSvM",
+                "mangledName": "$s9VusionSDK4ItemV8positionSSvM",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "productId",
+            "printedName": "productId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK4ItemV9productIdSSSgvp",
+            "mangledName": "$s9VusionSDK4ItemV9productIdSSSgvp",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK4ItemV9productIdSSSgvg",
+                "mangledName": "$s9VusionSDK4ItemV9productIdSSSgvg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK4ItemV9productIdSSSgvs",
+                "mangledName": "$s9VusionSDK4ItemV9productIdSSSgvs",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK4ItemV9productIdSSSgvM",
+                "mangledName": "$s9VusionSDK4ItemV9productIdSSSgvM",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "productDescription",
+            "printedName": "productDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK4ItemV18productDescriptionSSSgvp",
+            "mangledName": "$s9VusionSDK4ItemV18productDescriptionSSSgvp",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK4ItemV18productDescriptionSSSgvg",
+                "mangledName": "$s9VusionSDK4ItemV18productDescriptionSSSgvg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK4ItemV18productDescriptionSSSgvs",
+                "mangledName": "$s9VusionSDK4ItemV18productDescriptionSSSgvs",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK4ItemV18productDescriptionSSSgvM",
+                "mangledName": "$s9VusionSDK4ItemV18productDescriptionSSSgvM",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(deviceId:rssi:position:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Item",
+                "printedName": "VusionSDK.Item",
+                "usr": "s:9VusionSDK4ItemV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK4ItemV8deviceId4rssi8positionACSS_SiSStcfc",
+            "mangledName": "$s9VusionSDK4ItemV8deviceId4rssi8positionACSS_SiSStcfc",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(deviceId:rssi:position:productId:productDescription:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Item",
+                "printedName": "VusionSDK.Item",
+                "usr": "s:9VusionSDK4ItemV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK4ItemV8deviceId4rssi8position07productE00H11DescriptionACSS_SiS3Stcfc",
+            "mangledName": "$s9VusionSDK4ItemV8deviceId4rssi8position07productE00H11DescriptionACSS_SiS3Stcfc",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9VusionSDK4ItemV",
+        "mangledName": "$s9VusionSDK4ItemV",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IEdgeSenseProximityLight",
+        "printedName": "IEdgeSenseProximityLight",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onProximityEntered",
+            "printedName": "onProximityEntered(deviceId:proximityLevel:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DisplayProximity",
+                "printedName": "VusionSDK.DisplayProximity",
+                "usr": "s:9VusionSDK16DisplayProximityO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK24IEdgeSenseProximityLightP02onE7Entered8deviceId14proximityLevelySS_AA07DisplayE0OtF",
+            "mangledName": "$s9VusionSDK24IEdgeSenseProximityLightP02onE7Entered8deviceId14proximityLevelySS_AA07DisplayE0OtF",
+            "moduleName": "VusionSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : VusionSDK.IEdgeSenseProximityLight>",
+            "sugared_genericSig": "<Self where Self : VusionSDK.IEdgeSenseProximityLight>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onProximityExited",
+            "printedName": "onProximityExited(deviceId:proximityLevel:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DisplayProximity",
+                "printedName": "VusionSDK.DisplayProximity",
+                "usr": "s:9VusionSDK16DisplayProximityO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK24IEdgeSenseProximityLightP02onE6Exited8deviceId14proximityLevelySS_AA07DisplayE0OtF",
+            "mangledName": "$s9VusionSDK24IEdgeSenseProximityLightP02onE6Exited8deviceId14proximityLevelySS_AA07DisplayE0OtF",
+            "moduleName": "VusionSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : VusionSDK.IEdgeSenseProximityLight>",
+            "sugared_genericSig": "<Self where Self : VusionSDK.IEdgeSenseProximityLight>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:9VusionSDK24IEdgeSenseProximityLightP",
+        "mangledName": "$s9VusionSDK24IEdgeSenseProximityLightP",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DiscoveredPosition",
+        "printedName": "DiscoveredPosition",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "discoveredPosition",
+            "printedName": "discoveredPosition",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK18DiscoveredPositionV010discoveredD0SSvp",
+            "mangledName": "$s9VusionSDK18DiscoveredPositionV010discoveredD0SSvp",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK18DiscoveredPositionV010discoveredD0SSvg",
+                "mangledName": "$s9VusionSDK18DiscoveredPositionV010discoveredD0SSvg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK18DiscoveredPositionV010discoveredD0SSvs",
+                "mangledName": "$s9VusionSDK18DiscoveredPositionV010discoveredD0SSvs",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK18DiscoveredPositionV010discoveredD0SSvM",
+                "mangledName": "$s9VusionSDK18DiscoveredPositionV010discoveredD0SSvM",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "discoveredItems",
+            "printedName": "discoveredItems",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VusionSDK.Item]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Item",
+                    "printedName": "VusionSDK.Item",
+                    "usr": "s:9VusionSDK4ItemV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK18DiscoveredPositionV15discoveredItemsSayAA4ItemVGvp",
+            "mangledName": "$s9VusionSDK18DiscoveredPositionV15discoveredItemsSayAA4ItemVGvp",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[VusionSDK.Item]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Item",
+                        "printedName": "VusionSDK.Item",
+                        "usr": "s:9VusionSDK4ItemV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK18DiscoveredPositionV15discoveredItemsSayAA4ItemVGvg",
+                "mangledName": "$s9VusionSDK18DiscoveredPositionV15discoveredItemsSayAA4ItemVGvg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[VusionSDK.Item]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Item",
+                        "printedName": "VusionSDK.Item",
+                        "usr": "s:9VusionSDK4ItemV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK18DiscoveredPositionV15discoveredItemsSayAA4ItemVGvs",
+                "mangledName": "$s9VusionSDK18DiscoveredPositionV15discoveredItemsSayAA4ItemVGvs",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK18DiscoveredPositionV15discoveredItemsSayAA4ItemVGvM",
+                "mangledName": "$s9VusionSDK18DiscoveredPositionV15discoveredItemsSayAA4ItemVGvM",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9VusionSDK18DiscoveredPositionV",
+        "mangledName": "$s9VusionSDK18DiscoveredPositionV",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GeolocationingProperties",
+        "printedName": "GeolocationingProperties",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "properties",
+            "printedName": "properties",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK24GeolocationingPropertiesV10propertiesSDySSypSgGvp",
+            "mangledName": "$s9VusionSDK24GeolocationingPropertiesV10propertiesSDySSypSgGvp",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any?]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Any?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK24GeolocationingPropertiesV10propertiesSDySSypSgGvg",
+                "mangledName": "$s9VusionSDK24GeolocationingPropertiesV10propertiesSDySSypSgGvg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "store",
+            "printedName": "store",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK24GeolocationingPropertiesV5storeSSvp",
+            "mangledName": "$s9VusionSDK24GeolocationingPropertiesV5storeSSvp",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK24GeolocationingPropertiesV5storeSSvg",
+                "mangledName": "$s9VusionSDK24GeolocationingPropertiesV5storeSSvg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "startBeaconing",
+            "printedName": "startBeaconing",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK24GeolocationingPropertiesV14startBeaconingSbvp",
+            "mangledName": "$s9VusionSDK24GeolocationingPropertiesV14startBeaconingSbvp",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK24GeolocationingPropertiesV14startBeaconingSbvg",
+                "mangledName": "$s9VusionSDK24GeolocationingPropertiesV14startBeaconingSbvg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "beaconingInterval",
+            "printedName": "beaconingInterval",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK24GeolocationingPropertiesV17beaconingIntervalSiSgvp",
+            "mangledName": "$s9VusionSDK24GeolocationingPropertiesV17beaconingIntervalSiSgvp",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK24GeolocationingPropertiesV17beaconingIntervalSiSgvg",
+                "mangledName": "$s9VusionSDK24GeolocationingPropertiesV17beaconingIntervalSiSgvg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "beaconingDuration",
+            "printedName": "beaconingDuration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK24GeolocationingPropertiesV17beaconingDurationSiSgvp",
+            "mangledName": "$s9VusionSDK24GeolocationingPropertiesV17beaconingDurationSiSgvp",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK24GeolocationingPropertiesV17beaconingDurationSiSgvg",
+                "mangledName": "$s9VusionSDK24GeolocationingPropertiesV17beaconingDurationSiSgvg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "locationingStrategy",
+            "printedName": "locationingStrategy",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VusionSDK.LocationingStrategy?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LocationingStrategy",
+                    "printedName": "VusionSDK.LocationingStrategy",
+                    "usr": "s:9VusionSDK19LocationingStrategyO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK24GeolocationingPropertiesV19locationingStrategyAA011LocationingF0OSgvp",
+            "mangledName": "$s9VusionSDK24GeolocationingPropertiesV19locationingStrategyAA011LocationingF0OSgvp",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "VusionSDK.LocationingStrategy?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LocationingStrategy",
+                        "printedName": "VusionSDK.LocationingStrategy",
+                        "usr": "s:9VusionSDK19LocationingStrategyO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK24GeolocationingPropertiesV19locationingStrategyAA011LocationingF0OSgvg",
+                "mangledName": "$s9VusionSDK24GeolocationingPropertiesV19locationingStrategyAA011LocationingF0OSgvg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rssiClose",
+            "printedName": "rssiClose",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK24GeolocationingPropertiesV9rssiCloseSivp",
+            "mangledName": "$s9VusionSDK24GeolocationingPropertiesV9rssiCloseSivp",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK24GeolocationingPropertiesV9rssiCloseSivg",
+                "mangledName": "$s9VusionSDK24GeolocationingPropertiesV9rssiCloseSivg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(locationingStrategy:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeolocationingProperties",
+                "printedName": "VusionSDK.GeolocationingProperties",
+                "usr": "s:9VusionSDK24GeolocationingPropertiesV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LocationingStrategy",
+                "printedName": "VusionSDK.LocationingStrategy",
+                "usr": "s:9VusionSDK19LocationingStrategyO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK24GeolocationingPropertiesV19locationingStrategyAcA011LocationingF0O_tcfc",
+            "mangledName": "$s9VusionSDK24GeolocationingPropertiesV19locationingStrategyAcA011LocationingF0O_tcfc",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(locationingStrategy:rssiClose:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeolocationingProperties",
+                "printedName": "VusionSDK.GeolocationingProperties",
+                "usr": "s:9VusionSDK24GeolocationingPropertiesV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LocationingStrategy",
+                "printedName": "VusionSDK.LocationingStrategy",
+                "usr": "s:9VusionSDK19LocationingStrategyO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK24GeolocationingPropertiesV19locationingStrategy9rssiCloseAcA011LocationingF0O_Sitcfc",
+            "mangledName": "$s9VusionSDK24GeolocationingPropertiesV19locationingStrategy9rssiCloseAcA011LocationingF0O_Sitcfc",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(properties:locationingStrategy:rssiClose:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeolocationingProperties",
+                "printedName": "VusionSDK.GeolocationingProperties",
+                "usr": "s:9VusionSDK24GeolocationingPropertiesV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LocationingStrategy",
+                "printedName": "VusionSDK.LocationingStrategy",
+                "usr": "s:9VusionSDK19LocationingStrategyO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK24GeolocationingPropertiesV10properties19locationingStrategy9rssiCloseACSDySSypSgG_AA011LocationingG0OSitcfc",
+            "mangledName": "$s9VusionSDK24GeolocationingPropertiesV10properties19locationingStrategy9rssiCloseACSDySSypSgG_AA011LocationingG0OSitcfc",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(properties:locationingStrategy:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeolocationingProperties",
+                "printedName": "VusionSDK.GeolocationingProperties",
+                "usr": "s:9VusionSDK24GeolocationingPropertiesV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LocationingStrategy",
+                "printedName": "VusionSDK.LocationingStrategy",
+                "usr": "s:9VusionSDK19LocationingStrategyO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK24GeolocationingPropertiesV10properties19locationingStrategyACSDySSypSgG_AA011LocationingG0Otcfc",
+            "mangledName": "$s9VusionSDK24GeolocationingPropertiesV10properties19locationingStrategyACSDySSypSgG_AA011LocationingG0Otcfc",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(properties:store:locationingStrategy:rssiClose:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeolocationingProperties",
+                "printedName": "VusionSDK.GeolocationingProperties",
+                "usr": "s:9VusionSDK24GeolocationingPropertiesV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LocationingStrategy",
+                "printedName": "VusionSDK.LocationingStrategy",
+                "usr": "s:9VusionSDK19LocationingStrategyO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK24GeolocationingPropertiesV10properties5store19locationingStrategy9rssiCloseACSDySSypSgG_SSAA011LocationingH0OSitcfc",
+            "mangledName": "$s9VusionSDK24GeolocationingPropertiesV10properties5store19locationingStrategy9rssiCloseACSDySSypSgG_SSAA011LocationingH0OSitcfc",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(properties:store:startBeaconing:beaconingInterval:beaconingDuration:locationingStrategy:rssiClose:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeolocationingProperties",
+                "printedName": "VusionSDK.GeolocationingProperties",
+                "usr": "s:9VusionSDK24GeolocationingPropertiesV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LocationingStrategy",
+                "printedName": "VusionSDK.LocationingStrategy",
+                "usr": "s:9VusionSDK19LocationingStrategyO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK24GeolocationingPropertiesV10properties5store14startBeaconing17beaconingInterval0I8Duration19locationingStrategy9rssiCloseACSDySSypSgG_SSSbSiSgAmA011LocationingM0OSitcfc",
+            "mangledName": "$s9VusionSDK24GeolocationingPropertiesV10properties5store14startBeaconing17beaconingInterval0I8Duration19locationingStrategy9rssiCloseACSDySSypSgG_SSSbSiSgAmA011LocationingM0OSitcfc",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9VusionSDK24GeolocationingPropertiesV",
+        "mangledName": "$s9VusionSDK24GeolocationingPropertiesV",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IEdgeSenseDeviceLight",
+        "printedName": "IEdgeSenseDeviceLight",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "deviceRssiReceived",
+            "printedName": "deviceRssiReceived(deviceId:rssi:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK21IEdgeSenseDeviceLightP18deviceRssiReceived0G2Id4rssiySS_SitF",
+            "mangledName": "$s9VusionSDK21IEdgeSenseDeviceLightP18deviceRssiReceived0G2Id4rssiySS_SitF",
+            "moduleName": "VusionSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : VusionSDK.IEdgeSenseDeviceLight>",
+            "sugared_genericSig": "<Self where Self : VusionSDK.IEdgeSenseDeviceLight>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:9VusionSDK21IEdgeSenseDeviceLightP",
+        "mangledName": "$s9VusionSDK21IEdgeSenseDeviceLightP",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DisplayDirection",
+        "printedName": "DisplayDirection",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "STANDING",
+            "printedName": "STANDING",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.DisplayDirection.Type) -> VusionSDK.DisplayDirection",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DisplayDirection",
+                    "printedName": "VusionSDK.DisplayDirection",
+                    "usr": "s:9VusionSDK16DisplayDirectionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.DisplayDirection.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DisplayDirection",
+                        "printedName": "VusionSDK.DisplayDirection",
+                        "usr": "s:9VusionSDK16DisplayDirectionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK16DisplayDirectionO8STANDINGyA2CmF",
+            "mangledName": "$s9VusionSDK16DisplayDirectionO8STANDINGyA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "APPROACHING",
+            "printedName": "APPROACHING",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.DisplayDirection.Type) -> VusionSDK.DisplayDirection",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DisplayDirection",
+                    "printedName": "VusionSDK.DisplayDirection",
+                    "usr": "s:9VusionSDK16DisplayDirectionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.DisplayDirection.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DisplayDirection",
+                        "printedName": "VusionSDK.DisplayDirection",
+                        "usr": "s:9VusionSDK16DisplayDirectionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK16DisplayDirectionO11APPROACHINGyA2CmF",
+            "mangledName": "$s9VusionSDK16DisplayDirectionO11APPROACHINGyA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "LEAVING",
+            "printedName": "LEAVING",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.DisplayDirection.Type) -> VusionSDK.DisplayDirection",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DisplayDirection",
+                    "printedName": "VusionSDK.DisplayDirection",
+                    "usr": "s:9VusionSDK16DisplayDirectionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.DisplayDirection.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DisplayDirection",
+                        "printedName": "VusionSDK.DisplayDirection",
+                        "usr": "s:9VusionSDK16DisplayDirectionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK16DisplayDirectionO7LEAVINGyA2CmF",
+            "mangledName": "$s9VusionSDK16DisplayDirectionO7LEAVINGyA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DisplayDirection",
+                "printedName": "VusionSDK.DisplayDirection",
+                "usr": "s:9VusionSDK16DisplayDirectionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DisplayDirection",
+                "printedName": "VusionSDK.DisplayDirection",
+                "usr": "s:9VusionSDK16DisplayDirectionO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK16DisplayDirectionO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s9VusionSDK16DisplayDirectionO2eeoiySbAC_ACtFZ",
+            "moduleName": "VusionSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK16DisplayDirectionO9hashValueSivp",
+            "mangledName": "$s9VusionSDK16DisplayDirectionO9hashValueSivp",
+            "moduleName": "VusionSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK16DisplayDirectionO9hashValueSivg",
+                "mangledName": "$s9VusionSDK16DisplayDirectionO9hashValueSivg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK16DisplayDirectionO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s9VusionSDK16DisplayDirectionO4hash4intoys6HasherVz_tF",
+            "moduleName": "VusionSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9VusionSDK16DisplayDirectionO",
+        "mangledName": "$s9VusionSDK16DisplayDirectionO",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DisplayProximity",
+        "printedName": "DisplayProximity",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "CLOSE",
+            "printedName": "CLOSE",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.DisplayProximity.Type) -> VusionSDK.DisplayProximity",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DisplayProximity",
+                    "printedName": "VusionSDK.DisplayProximity",
+                    "usr": "s:9VusionSDK16DisplayProximityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.DisplayProximity.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DisplayProximity",
+                        "printedName": "VusionSDK.DisplayProximity",
+                        "usr": "s:9VusionSDK16DisplayProximityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK16DisplayProximityO5CLOSEyA2CmF",
+            "mangledName": "$s9VusionSDK16DisplayProximityO5CLOSEyA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "NEAR",
+            "printedName": "NEAR",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.DisplayProximity.Type) -> VusionSDK.DisplayProximity",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DisplayProximity",
+                    "printedName": "VusionSDK.DisplayProximity",
+                    "usr": "s:9VusionSDK16DisplayProximityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.DisplayProximity.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DisplayProximity",
+                        "printedName": "VusionSDK.DisplayProximity",
+                        "usr": "s:9VusionSDK16DisplayProximityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK16DisplayProximityO4NEARyA2CmF",
+            "mangledName": "$s9VusionSDK16DisplayProximityO4NEARyA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "FAR",
+            "printedName": "FAR",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.DisplayProximity.Type) -> VusionSDK.DisplayProximity",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DisplayProximity",
+                    "printedName": "VusionSDK.DisplayProximity",
+                    "usr": "s:9VusionSDK16DisplayProximityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.DisplayProximity.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DisplayProximity",
+                        "printedName": "VusionSDK.DisplayProximity",
+                        "usr": "s:9VusionSDK16DisplayProximityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK16DisplayProximityO3FARyA2CmF",
+            "mangledName": "$s9VusionSDK16DisplayProximityO3FARyA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "UNKNOWN",
+            "printedName": "UNKNOWN",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.DisplayProximity.Type) -> VusionSDK.DisplayProximity",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DisplayProximity",
+                    "printedName": "VusionSDK.DisplayProximity",
+                    "usr": "s:9VusionSDK16DisplayProximityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.DisplayProximity.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DisplayProximity",
+                        "printedName": "VusionSDK.DisplayProximity",
+                        "usr": "s:9VusionSDK16DisplayProximityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK16DisplayProximityO7UNKNOWNyA2CmF",
+            "mangledName": "$s9VusionSDK16DisplayProximityO7UNKNOWNyA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DisplayProximity",
+                "printedName": "VusionSDK.DisplayProximity",
+                "usr": "s:9VusionSDK16DisplayProximityO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DisplayProximity",
+                "printedName": "VusionSDK.DisplayProximity",
+                "usr": "s:9VusionSDK16DisplayProximityO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK16DisplayProximityO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s9VusionSDK16DisplayProximityO2eeoiySbAC_ACtFZ",
+            "moduleName": "VusionSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK16DisplayProximityO9hashValueSivp",
+            "mangledName": "$s9VusionSDK16DisplayProximityO9hashValueSivp",
+            "moduleName": "VusionSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK16DisplayProximityO9hashValueSivg",
+                "mangledName": "$s9VusionSDK16DisplayProximityO9hashValueSivg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK16DisplayProximityO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s9VusionSDK16DisplayProximityO4hash4intoys6HasherVz_tF",
+            "moduleName": "VusionSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9VusionSDK16DisplayProximityO",
+        "mangledName": "$s9VusionSDK16DisplayProximityO",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ProximityLevel",
+        "printedName": "ProximityLevel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "close",
+            "printedName": "close",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.ProximityLevel.Type) -> VusionSDK.ProximityLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProximityLevel",
+                    "printedName": "VusionSDK.ProximityLevel",
+                    "usr": "s:9VusionSDK14ProximityLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.ProximityLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProximityLevel",
+                        "printedName": "VusionSDK.ProximityLevel",
+                        "usr": "s:9VusionSDK14ProximityLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK14ProximityLevelO5closeyA2CmF",
+            "mangledName": "$s9VusionSDK14ProximityLevelO5closeyA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "medium",
+            "printedName": "medium",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.ProximityLevel.Type) -> VusionSDK.ProximityLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProximityLevel",
+                    "printedName": "VusionSDK.ProximityLevel",
+                    "usr": "s:9VusionSDK14ProximityLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.ProximityLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProximityLevel",
+                        "printedName": "VusionSDK.ProximityLevel",
+                        "usr": "s:9VusionSDK14ProximityLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK14ProximityLevelO6mediumyA2CmF",
+            "mangledName": "$s9VusionSDK14ProximityLevelO6mediumyA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "far",
+            "printedName": "far",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.ProximityLevel.Type) -> VusionSDK.ProximityLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProximityLevel",
+                    "printedName": "VusionSDK.ProximityLevel",
+                    "usr": "s:9VusionSDK14ProximityLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.ProximityLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProximityLevel",
+                        "printedName": "VusionSDK.ProximityLevel",
+                        "usr": "s:9VusionSDK14ProximityLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK14ProximityLevelO3faryA2CmF",
+            "mangledName": "$s9VusionSDK14ProximityLevelO3faryA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.ProximityLevel.Type) -> VusionSDK.ProximityLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProximityLevel",
+                    "printedName": "VusionSDK.ProximityLevel",
+                    "usr": "s:9VusionSDK14ProximityLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.ProximityLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProximityLevel",
+                        "printedName": "VusionSDK.ProximityLevel",
+                        "usr": "s:9VusionSDK14ProximityLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK14ProximityLevelO7unknownyA2CmF",
+            "mangledName": "$s9VusionSDK14ProximityLevelO7unknownyA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProximityLevel",
+                "printedName": "VusionSDK.ProximityLevel",
+                "usr": "s:9VusionSDK14ProximityLevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProximityLevel",
+                "printedName": "VusionSDK.ProximityLevel",
+                "usr": "s:9VusionSDK14ProximityLevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK14ProximityLevelO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s9VusionSDK14ProximityLevelO2eeoiySbAC_ACtFZ",
+            "moduleName": "VusionSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK14ProximityLevelO9hashValueSivp",
+            "mangledName": "$s9VusionSDK14ProximityLevelO9hashValueSivp",
+            "moduleName": "VusionSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK14ProximityLevelO9hashValueSivg",
+                "mangledName": "$s9VusionSDK14ProximityLevelO9hashValueSivg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK14ProximityLevelO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s9VusionSDK14ProximityLevelO4hash4intoys6HasherVz_tF",
+            "moduleName": "VusionSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9VusionSDK14ProximityLevelO",
+        "mangledName": "$s9VusionSDK14ProximityLevelO",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GeoLocationingProximityCloudAPI",
+        "printedName": "GeoLocationingProximityCloudAPI",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(callback:proximityConfig:vCloudConnection:flashConfigClose:flashConfigNear:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeoLocationingProximityCloudAPI",
+                "printedName": "VusionSDK.GeoLocationingProximityCloudAPI",
+                "usr": "s:9VusionSDK31GeoLocationingProximityCloudAPIC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IEdgeSenseProximityLight",
+                "printedName": "any VusionSDK.IEdgeSenseProximityLight",
+                "usr": "s:9VusionSDK24IEdgeSenseProximityLightP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProximityConfig",
+                "printedName": "VusionSDK.ProximityConfig",
+                "usr": "s:9VusionSDK15ProximityConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VCloudConnection",
+                "printedName": "VusionSDK.VCloudConnection",
+                "usr": "s:9VusionSDK16VCloudConnectionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FlashConfig",
+                "printedName": "VusionSDK.FlashConfig",
+                "usr": "s:9VusionSDK11FlashConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FlashConfig",
+                "printedName": "VusionSDK.FlashConfig",
+                "usr": "s:9VusionSDK11FlashConfigV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK31GeoLocationingProximityCloudAPIC8callback15proximityConfig01vF10Connection05flashJ5Close0lJ4NearAcA010IEdgeSenseE5Light_p_AA0eJ0VAA06VCloudK0VAA05FlashJ0VAOtcfc",
+            "mangledName": "$s9VusionSDK31GeoLocationingProximityCloudAPIC8callback15proximityConfig01vF10Connection05flashJ5Close0lJ4NearAcA010IEdgeSenseE5Light_p_AA0eJ0VAA06VCloudK0VAA05FlashJ0VAOtcfc",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "locateMe",
+            "printedName": "locateMe(beacons:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VusionSDK.BeaconNeighbour]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BeaconNeighbour",
+                    "printedName": "VusionSDK.BeaconNeighbour",
+                    "usr": "s:9VusionSDK15BeaconNeighbourV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK31GeoLocationingProximityCloudAPIC8locateMe7beaconsSiSayAA15BeaconNeighbourVG_tF",
+            "mangledName": "$s9VusionSDK31GeoLocationingProximityCloudAPIC8locateMe7beaconsSiSayAA15BeaconNeighbourVG_tF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stopLocationing",
+            "printedName": "stopLocationing()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK31GeoLocationingProximityCloudAPIC04stopD0yyF",
+            "mangledName": "$s9VusionSDK31GeoLocationingProximityCloudAPIC04stopD0yyF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateBeacons",
+            "printedName": "updateBeacons(beacons:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK31GeoLocationingProximityCloudAPIC13updateBeacons7beaconsySaySSG_tF",
+            "mangledName": "$s9VusionSDK31GeoLocationingProximityCloudAPIC13updateBeacons7beaconsySaySSG_tF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeoLocationingProximityCloudAPI",
+                "printedName": "VusionSDK.GeoLocationingProximityCloudAPI",
+                "usr": "s:9VusionSDK31GeoLocationingProximityCloudAPIC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK31GeoLocationingProximityCloudAPICACycfc",
+            "mangledName": "$s9VusionSDK31GeoLocationingProximityCloudAPICACycfc",
+            "moduleName": "VusionSDK",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9VusionSDK31GeoLocationingProximityCloudAPIC",
+        "mangledName": "$s9VusionSDK31GeoLocationingProximityCloudAPIC",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:9VusionSDK18BaseGeoLocationingC",
+        "superclassNames": [
+          "VusionSDK.BaseGeoLocationing"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NeighbourDetectionStrategy",
+        "printedName": "NeighbourDetectionStrategy",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "EnableAllLabelsDetection",
+            "printedName": "EnableAllLabelsDetection",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.NeighbourDetectionStrategy.Type) -> VusionSDK.NeighbourDetectionStrategy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NeighbourDetectionStrategy",
+                    "printedName": "VusionSDK.NeighbourDetectionStrategy",
+                    "usr": "s:9VusionSDK26NeighbourDetectionStrategyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.NeighbourDetectionStrategy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NeighbourDetectionStrategy",
+                        "printedName": "VusionSDK.NeighbourDetectionStrategy",
+                        "usr": "s:9VusionSDK26NeighbourDetectionStrategyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK26NeighbourDetectionStrategyO015EnableAllLabelsD0yA2CmF",
+            "mangledName": "$s9VusionSDK26NeighbourDetectionStrategyO015EnableAllLabelsD0yA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "DEFAULT",
+            "printedName": "DEFAULT",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.NeighbourDetectionStrategy.Type) -> VusionSDK.NeighbourDetectionStrategy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NeighbourDetectionStrategy",
+                    "printedName": "VusionSDK.NeighbourDetectionStrategy",
+                    "usr": "s:9VusionSDK26NeighbourDetectionStrategyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.NeighbourDetectionStrategy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NeighbourDetectionStrategy",
+                        "printedName": "VusionSDK.NeighbourDetectionStrategy",
+                        "usr": "s:9VusionSDK26NeighbourDetectionStrategyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK26NeighbourDetectionStrategyO7DEFAULTyA2CmF",
+            "mangledName": "$s9VusionSDK26NeighbourDetectionStrategyO7DEFAULTyA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NeighbourDetectionStrategy",
+                "printedName": "VusionSDK.NeighbourDetectionStrategy",
+                "usr": "s:9VusionSDK26NeighbourDetectionStrategyO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NeighbourDetectionStrategy",
+                "printedName": "VusionSDK.NeighbourDetectionStrategy",
+                "usr": "s:9VusionSDK26NeighbourDetectionStrategyO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK26NeighbourDetectionStrategyO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s9VusionSDK26NeighbourDetectionStrategyO2eeoiySbAC_ACtFZ",
+            "moduleName": "VusionSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK26NeighbourDetectionStrategyO9hashValueSivp",
+            "mangledName": "$s9VusionSDK26NeighbourDetectionStrategyO9hashValueSivp",
+            "moduleName": "VusionSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK26NeighbourDetectionStrategyO9hashValueSivg",
+                "mangledName": "$s9VusionSDK26NeighbourDetectionStrategyO9hashValueSivg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK26NeighbourDetectionStrategyO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s9VusionSDK26NeighbourDetectionStrategyO4hash4intoys6HasherVz_tF",
+            "moduleName": "VusionSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9VusionSDK26NeighbourDetectionStrategyO",
+        "mangledName": "$s9VusionSDK26NeighbourDetectionStrategyO",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GeoLocationingProximity",
+        "printedName": "GeoLocationingProximity",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(callback:proximityConfig:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeoLocationingProximity",
+                "printedName": "VusionSDK.GeoLocationingProximity",
+                "usr": "s:9VusionSDK23GeoLocationingProximityC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IEdgeSenseProximityLight",
+                "printedName": "any VusionSDK.IEdgeSenseProximityLight",
+                "usr": "s:9VusionSDK24IEdgeSenseProximityLightP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProximityConfig",
+                "printedName": "VusionSDK.ProximityConfig",
+                "usr": "s:9VusionSDK15ProximityConfigV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK23GeoLocationingProximityC8callback15proximityConfigAcA010IEdgeSenseE5Light_p_AA0eH0Vtcfc",
+            "mangledName": "$s9VusionSDK23GeoLocationingProximityC8callback15proximityConfigAcA010IEdgeSenseE5Light_p_AA0eH0Vtcfc",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "locateMe",
+            "printedName": "locateMe(beacons:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VusionSDK.BeaconNeighbour]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BeaconNeighbour",
+                    "printedName": "VusionSDK.BeaconNeighbour",
+                    "usr": "s:9VusionSDK15BeaconNeighbourV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK23GeoLocationingProximityC8locateMe7beaconsSiSayAA15BeaconNeighbourVG_tF",
+            "mangledName": "$s9VusionSDK23GeoLocationingProximityC8locateMe7beaconsSiSayAA15BeaconNeighbourVG_tF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stopLocationing",
+            "printedName": "stopLocationing()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK23GeoLocationingProximityC04stopD0yyF",
+            "mangledName": "$s9VusionSDK23GeoLocationingProximityC04stopD0yyF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateBeacons",
+            "printedName": "updateBeacons(beacons:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK23GeoLocationingProximityC13updateBeacons7beaconsySaySSG_tF",
+            "mangledName": "$s9VusionSDK23GeoLocationingProximityC13updateBeacons7beaconsySaySSG_tF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeoLocationingProximity",
+                "printedName": "VusionSDK.GeoLocationingProximity",
+                "usr": "s:9VusionSDK23GeoLocationingProximityC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK23GeoLocationingProximityCACycfc",
+            "mangledName": "$s9VusionSDK23GeoLocationingProximityCACycfc",
+            "moduleName": "VusionSDK",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9VusionSDK23GeoLocationingProximityC",
+        "mangledName": "$s9VusionSDK23GeoLocationingProximityC",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:9VusionSDK18BaseGeoLocationingC",
+        "superclassNames": [
+          "VusionSDK.BaseGeoLocationing"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Anchor",
+        "printedName": "Anchor",
+        "declKind": "Struct",
+        "usr": "s:9VusionSDK6AnchorV",
+        "mangledName": "$s9VusionSDK6AnchorV",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LocationingStrategy",
+        "printedName": "LocationingStrategy",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "CouponingStrategy",
+            "printedName": "CouponingStrategy",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.LocationingStrategy.Type) -> VusionSDK.LocationingStrategy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LocationingStrategy",
+                    "printedName": "VusionSDK.LocationingStrategy",
+                    "usr": "s:9VusionSDK19LocationingStrategyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.LocationingStrategy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LocationingStrategy",
+                        "printedName": "VusionSDK.LocationingStrategy",
+                        "usr": "s:9VusionSDK19LocationingStrategyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK19LocationingStrategyO09CouponingD0yA2CmF",
+            "mangledName": "$s9VusionSDK19LocationingStrategyO09CouponingD0yA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "DefaultStrategy",
+            "printedName": "DefaultStrategy",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.LocationingStrategy.Type) -> VusionSDK.LocationingStrategy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LocationingStrategy",
+                    "printedName": "VusionSDK.LocationingStrategy",
+                    "usr": "s:9VusionSDK19LocationingStrategyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.LocationingStrategy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LocationingStrategy",
+                        "printedName": "VusionSDK.LocationingStrategy",
+                        "usr": "s:9VusionSDK19LocationingStrategyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK19LocationingStrategyO07DefaultD0yA2CmF",
+            "mangledName": "$s9VusionSDK19LocationingStrategyO07DefaultD0yA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "AnchorLocationStrategy",
+            "printedName": "AnchorLocationStrategy",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.LocationingStrategy.Type) -> VusionSDK.LocationingStrategy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LocationingStrategy",
+                    "printedName": "VusionSDK.LocationingStrategy",
+                    "usr": "s:9VusionSDK19LocationingStrategyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.LocationingStrategy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LocationingStrategy",
+                        "printedName": "VusionSDK.LocationingStrategy",
+                        "usr": "s:9VusionSDK19LocationingStrategyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK19LocationingStrategyO014AnchorLocationD0yA2CmF",
+            "mangledName": "$s9VusionSDK19LocationingStrategyO014AnchorLocationD0yA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LocationingStrategy",
+                "printedName": "VusionSDK.LocationingStrategy",
+                "usr": "s:9VusionSDK19LocationingStrategyO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LocationingStrategy",
+                "printedName": "VusionSDK.LocationingStrategy",
+                "usr": "s:9VusionSDK19LocationingStrategyO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK19LocationingStrategyO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s9VusionSDK19LocationingStrategyO2eeoiySbAC_ACtFZ",
+            "moduleName": "VusionSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK19LocationingStrategyO9hashValueSivp",
+            "mangledName": "$s9VusionSDK19LocationingStrategyO9hashValueSivp",
+            "moduleName": "VusionSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK19LocationingStrategyO9hashValueSivg",
+                "mangledName": "$s9VusionSDK19LocationingStrategyO9hashValueSivg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK19LocationingStrategyO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s9VusionSDK19LocationingStrategyO4hash4intoys6HasherVz_tF",
+            "moduleName": "VusionSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9VusionSDK19LocationingStrategyO",
+        "mangledName": "$s9VusionSDK19LocationingStrategyO",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GeoLocationingDeviceCloudAPI",
+        "printedName": "GeoLocationingDeviceCloudAPI",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(callback:proximityConfig:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeoLocationingDeviceCloudAPI",
+                "printedName": "VusionSDK.GeoLocationingDeviceCloudAPI",
+                "usr": "s:9VusionSDK28GeoLocationingDeviceCloudAPIC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IEdgeSenseDeviceLight",
+                "printedName": "any VusionSDK.IEdgeSenseDeviceLight",
+                "usr": "s:9VusionSDK21IEdgeSenseDeviceLightP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProximityConfig",
+                "printedName": "VusionSDK.ProximityConfig",
+                "usr": "s:9VusionSDK15ProximityConfigV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK28GeoLocationingDeviceCloudAPIC8callback15proximityConfigAcA010IEdgeSenseE5Light_p_AA09ProximityJ0Vtcfc",
+            "mangledName": "$s9VusionSDK28GeoLocationingDeviceCloudAPIC8callback15proximityConfigAcA010IEdgeSenseE5Light_p_AA09ProximityJ0Vtcfc",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "locateMe",
+            "printedName": "locateMe(beacons:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VusionSDK.BeaconNeighbour]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BeaconNeighbour",
+                    "printedName": "VusionSDK.BeaconNeighbour",
+                    "usr": "s:9VusionSDK15BeaconNeighbourV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK28GeoLocationingDeviceCloudAPIC8locateMe7beaconsSiSayAA15BeaconNeighbourVG_tF",
+            "mangledName": "$s9VusionSDK28GeoLocationingDeviceCloudAPIC8locateMe7beaconsSiSayAA15BeaconNeighbourVG_tF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stopLocationing",
+            "printedName": "stopLocationing()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK28GeoLocationingDeviceCloudAPIC04stopD0yyF",
+            "mangledName": "$s9VusionSDK28GeoLocationingDeviceCloudAPIC04stopD0yyF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateBeacons",
+            "printedName": "updateBeacons(beacons:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK28GeoLocationingDeviceCloudAPIC13updateBeacons7beaconsySaySSG_tF",
+            "mangledName": "$s9VusionSDK28GeoLocationingDeviceCloudAPIC13updateBeacons7beaconsySaySSG_tF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "positionDiscovered",
+            "printedName": "positionDiscovered(discoveredPosition:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VusionSDK.DiscoveredPosition]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DiscoveredPosition",
+                    "printedName": "VusionSDK.DiscoveredPosition",
+                    "usr": "s:9VusionSDK18DiscoveredPositionV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK28GeoLocationingDeviceCloudAPIC18positionDiscovered18discoveredPositionySayAA0iK0VG_tF",
+            "mangledName": "$s9VusionSDK28GeoLocationingDeviceCloudAPIC18positionDiscovered18discoveredPositionySayAA0iK0VG_tF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deviceRssiReceived",
+            "printedName": "deviceRssiReceived(deviceId:parent:rssi:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK28GeoLocationingDeviceCloudAPIC18deviceRssiReceived0H2Id6parent4rssiySS_SSSitF",
+            "mangledName": "$s9VusionSDK28GeoLocationingDeviceCloudAPIC18deviceRssiReceived0H2Id6parent4rssiySS_SSSitF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeoLocationingDeviceCloudAPI",
+                "printedName": "VusionSDK.GeoLocationingDeviceCloudAPI",
+                "usr": "s:9VusionSDK28GeoLocationingDeviceCloudAPIC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK28GeoLocationingDeviceCloudAPICACycfc",
+            "mangledName": "$s9VusionSDK28GeoLocationingDeviceCloudAPICACycfc",
+            "moduleName": "VusionSDK",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9VusionSDK28GeoLocationingDeviceCloudAPIC",
+        "mangledName": "$s9VusionSDK28GeoLocationingDeviceCloudAPIC",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:9VusionSDK18BaseGeoLocationingC",
+        "superclassNames": [
+          "VusionSDK.BaseGeoLocationing"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GeoLocationingDevice",
+        "printedName": "GeoLocationingDevice",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(callback:proximityConfig:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeoLocationingDevice",
+                "printedName": "VusionSDK.GeoLocationingDevice",
+                "usr": "s:9VusionSDK20GeoLocationingDeviceC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IEdgeSenseDeviceLight",
+                "printedName": "any VusionSDK.IEdgeSenseDeviceLight",
+                "usr": "s:9VusionSDK21IEdgeSenseDeviceLightP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProximityConfig",
+                "printedName": "VusionSDK.ProximityConfig",
+                "usr": "s:9VusionSDK15ProximityConfigV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK20GeoLocationingDeviceC8callback15proximityConfigAcA010IEdgeSenseE5Light_p_AA09ProximityH0Vtcfc",
+            "mangledName": "$s9VusionSDK20GeoLocationingDeviceC8callback15proximityConfigAcA010IEdgeSenseE5Light_p_AA09ProximityH0Vtcfc",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "locateMe",
+            "printedName": "locateMe(beacons:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VusionSDK.BeaconNeighbour]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BeaconNeighbour",
+                    "printedName": "VusionSDK.BeaconNeighbour",
+                    "usr": "s:9VusionSDK15BeaconNeighbourV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK20GeoLocationingDeviceC8locateMe7beaconsSiSayAA15BeaconNeighbourVG_tF",
+            "mangledName": "$s9VusionSDK20GeoLocationingDeviceC8locateMe7beaconsSiSayAA15BeaconNeighbourVG_tF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stopLocationing",
+            "printedName": "stopLocationing()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK20GeoLocationingDeviceC04stopD0yyF",
+            "mangledName": "$s9VusionSDK20GeoLocationingDeviceC04stopD0yyF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateBeacons",
+            "printedName": "updateBeacons(beacons:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK20GeoLocationingDeviceC13updateBeacons7beaconsySaySSG_tF",
+            "mangledName": "$s9VusionSDK20GeoLocationingDeviceC13updateBeacons7beaconsySaySSG_tF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "positionDiscovered",
+            "printedName": "positionDiscovered(discoveredPosition:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VusionSDK.DiscoveredPosition]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DiscoveredPosition",
+                    "printedName": "VusionSDK.DiscoveredPosition",
+                    "usr": "s:9VusionSDK18DiscoveredPositionV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK20GeoLocationingDeviceC18positionDiscovered18discoveredPositionySayAA0gI0VG_tF",
+            "mangledName": "$s9VusionSDK20GeoLocationingDeviceC18positionDiscovered18discoveredPositionySayAA0gI0VG_tF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deviceRssiReceived",
+            "printedName": "deviceRssiReceived(deviceId:parent:rssi:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK20GeoLocationingDeviceC18deviceRssiReceived0F2Id6parent4rssiySS_SSSitF",
+            "mangledName": "$s9VusionSDK20GeoLocationingDeviceC18deviceRssiReceived0F2Id6parent4rssiySS_SSSitF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeoLocationingDevice",
+                "printedName": "VusionSDK.GeoLocationingDevice",
+                "usr": "s:9VusionSDK20GeoLocationingDeviceC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK20GeoLocationingDeviceCACycfc",
+            "mangledName": "$s9VusionSDK20GeoLocationingDeviceCACycfc",
+            "moduleName": "VusionSDK",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9VusionSDK20GeoLocationingDeviceC",
+        "mangledName": "$s9VusionSDK20GeoLocationingDeviceC",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:9VusionSDK18BaseGeoLocationingC",
+        "superclassNames": [
+          "VusionSDK.BaseGeoLocationing"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BaseGeoLocationing",
+        "printedName": "BaseGeoLocationing",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BaseGeoLocationing",
+                "printedName": "VusionSDK.BaseGeoLocationing",
+                "usr": "s:9VusionSDK18BaseGeoLocationingC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK18BaseGeoLocationingCACycfc",
+            "mangledName": "$s9VusionSDK18BaseGeoLocationingCACycfc",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "updateBeaconAndNeighbours",
+            "printedName": "updateBeaconAndNeighbours(beacons:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VusionSDK.BeaconNeighbour]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BeaconNeighbour",
+                    "printedName": "VusionSDK.BeaconNeighbour",
+                    "usr": "s:9VusionSDK15BeaconNeighbourV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK18BaseGeoLocationingC25updateBeaconAndNeighbours7beaconsySayAA0G9NeighbourVG_tF",
+            "mangledName": "$s9VusionSDK18BaseGeoLocationingC25updateBeaconAndNeighbours7beaconsySayAA0G9NeighbourVG_tF",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9VusionSDK18BaseGeoLocationingC",
+        "mangledName": "$s9VusionSDK18BaseGeoLocationingC",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VCloudConnection",
+        "printedName": "VCloudConnection",
+        "declKind": "Struct",
+        "usr": "s:9VusionSDK16VCloudConnectionV",
+        "mangledName": "$s9VusionSDK16VCloudConnectionV",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreBluetooth",
+        "printedName": "CoreBluetooth",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ProximityConfig",
+        "printedName": "ProximityConfig",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rssiClose:rssiNear:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProximityConfig",
+                "printedName": "VusionSDK.ProximityConfig",
+                "usr": "s:9VusionSDK15ProximityConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VusionSDK15ProximityConfigV9rssiClose0E4NearACSi_Sitcfc",
+            "mangledName": "$s9VusionSDK15ProximityConfigV9rssiClose0E4NearACSi_Sitcfc",
+            "moduleName": "VusionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9VusionSDK15ProximityConfigV",
+        "mangledName": "$s9VusionSDK15ProximityConfigV",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FlashPattern",
+        "printedName": "FlashPattern",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "FLASH_4_TIMES",
+            "printedName": "FLASH_4_TIMES",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.FlashPattern.Type) -> VusionSDK.FlashPattern",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlashPattern",
+                    "printedName": "VusionSDK.FlashPattern",
+                    "usr": "s:9VusionSDK12FlashPatternO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.FlashPattern.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FlashPattern",
+                        "printedName": "VusionSDK.FlashPattern",
+                        "usr": "s:9VusionSDK12FlashPatternO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK12FlashPatternO13FLASH_4_TIMESyA2CmF",
+            "mangledName": "$s9VusionSDK12FlashPatternO13FLASH_4_TIMESyA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "EACH_1_SECOND",
+            "printedName": "EACH_1_SECOND",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.FlashPattern.Type) -> VusionSDK.FlashPattern",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlashPattern",
+                    "printedName": "VusionSDK.FlashPattern",
+                    "usr": "s:9VusionSDK12FlashPatternO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.FlashPattern.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FlashPattern",
+                        "printedName": "VusionSDK.FlashPattern",
+                        "usr": "s:9VusionSDK12FlashPatternO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK12FlashPatternO13EACH_1_SECONDyA2CmF",
+            "mangledName": "$s9VusionSDK12FlashPatternO13EACH_1_SECONDyA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "EACH_2_SECONDS",
+            "printedName": "EACH_2_SECONDS",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.FlashPattern.Type) -> VusionSDK.FlashPattern",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlashPattern",
+                    "printedName": "VusionSDK.FlashPattern",
+                    "usr": "s:9VusionSDK12FlashPatternO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.FlashPattern.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FlashPattern",
+                        "printedName": "VusionSDK.FlashPattern",
+                        "usr": "s:9VusionSDK12FlashPatternO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK12FlashPatternO14EACH_2_SECONDSyA2CmF",
+            "mangledName": "$s9VusionSDK12FlashPatternO14EACH_2_SECONDSyA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "EACH_4_SECONDS",
+            "printedName": "EACH_4_SECONDS",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VusionSDK.FlashPattern.Type) -> VusionSDK.FlashPattern",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlashPattern",
+                    "printedName": "VusionSDK.FlashPattern",
+                    "usr": "s:9VusionSDK12FlashPatternO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VusionSDK.FlashPattern.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FlashPattern",
+                        "printedName": "VusionSDK.FlashPattern",
+                        "usr": "s:9VusionSDK12FlashPatternO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VusionSDK12FlashPatternO14EACH_4_SECONDSyA2CmF",
+            "mangledName": "$s9VusionSDK12FlashPatternO14EACH_4_SECONDSyA2CmF",
+            "moduleName": "VusionSDK"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FlashPattern",
+                "printedName": "VusionSDK.FlashPattern",
+                "usr": "s:9VusionSDK12FlashPatternO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FlashPattern",
+                "printedName": "VusionSDK.FlashPattern",
+                "usr": "s:9VusionSDK12FlashPatternO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK12FlashPatternO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s9VusionSDK12FlashPatternO2eeoiySbAC_ACtFZ",
+            "moduleName": "VusionSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VusionSDK12FlashPatternO9hashValueSivp",
+            "mangledName": "$s9VusionSDK12FlashPatternO9hashValueSivp",
+            "moduleName": "VusionSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VusionSDK12FlashPatternO9hashValueSivg",
+                "mangledName": "$s9VusionSDK12FlashPatternO9hashValueSivg",
+                "moduleName": "VusionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VusionSDK12FlashPatternO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s9VusionSDK12FlashPatternO4hash4intoys6HasherVz_tF",
+            "moduleName": "VusionSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9VusionSDK12FlashPatternO",
+        "mangledName": "$s9VusionSDK12FlashPatternO",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "VusionSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FlashConfig",
+        "printedName": "FlashConfig",
+        "declKind": "Struct",
+        "usr": "s:9VusionSDK11FlashConfigV",
+        "mangledName": "$s9VusionSDK11FlashConfigV",
+        "moduleName": "VusionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/AnchorStrategy.swift",
+      "kind": "Array",
+      "offset": 122,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/AnchorStrategy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 164,
+      "length": 4,
+      "value": "4000"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/AnchorStrategy.swift",
+      "kind": "StringLiteral",
+      "offset": 212,
+      "length": 27,
+      "value": "\"com.vusion.ios.Geofencing\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/AnchorStrategy.swift",
+      "kind": "StringLiteral",
+      "offset": 251,
+      "length": 16,
+      "value": "\"AnchorStrategy\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/Item.swift",
+      "kind": "IntegerLiteral",
+      "offset": 81,
+      "length": 5,
+      "value": "-9999"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/Geolocationing.swift",
+      "kind": "Array",
+      "offset": 190,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/Geolocationing.swift",
+      "kind": "Array",
+      "offset": 225,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/Geolocationing.swift",
+      "kind": "Array",
+      "offset": 736,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/Geolocationing.swift",
+      "kind": "Array",
+      "offset": 767,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/Geolocationing.swift",
+      "kind": "IntegerLiteral",
+      "offset": 795,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/SepiooLocationingProperties.swift",
+      "kind": "IntegerLiteral",
+      "offset": 108,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/SepiooLocationingProperties.swift",
+      "kind": "IntegerLiteral",
+      "offset": 135,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/SepiooLocationingProperties.swift",
+      "kind": "IntegerLiteral",
+      "offset": 161,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/SepiooLocationingProperties.swift",
+      "kind": "IntegerLiteral",
+      "offset": 201,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/SepiooLocationingProperties.swift",
+      "kind": "IntegerLiteral",
+      "offset": 241,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/SepiooLocationingProperties.swift",
+      "kind": "StringLiteral",
+      "offset": 269,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/SepiooLocationingProperties.swift",
+      "kind": "StringLiteral",
+      "offset": 301,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/SepiooLocationingProperties.swift",
+      "kind": "StringLiteral",
+      "offset": 337,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/SepiooLocationingProperties.swift",
+      "kind": "StringLiteral",
+      "offset": 509,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/SepiooLocationingProperties.swift",
+      "kind": "IntegerLiteral",
+      "offset": 806,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/SepiooLocationingProperties.swift",
+      "kind": "BooleanLiteral",
+      "offset": 843,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/InternalItem.swift",
+      "kind": "IntegerLiteral",
+      "offset": 89,
+      "length": 5,
+      "value": "-9999"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/InternalItem.swift",
+      "kind": "BooleanLiteral",
+      "offset": 123,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/InternalItem.swift",
+      "kind": "BooleanLiteral",
+      "offset": 153,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/InternalItem.swift",
+      "kind": "IntegerLiteral",
+      "offset": 183,
+      "length": 5,
+      "value": "-9999"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/InternalItem.swift",
+      "kind": "IntegerLiteral",
+      "offset": 221,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/InternalItem.swift",
+      "kind": "StringLiteral",
+      "offset": 247,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/InternalItem.swift",
+      "kind": "Array",
+      "offset": 295,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/InternalItem.swift",
+      "kind": "StringLiteral",
+      "offset": 325,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/InternalItem.swift",
+      "kind": "IntegerLiteral",
+      "offset": 353,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/rest\/VCloudRestClient.swift",
+      "kind": "StringLiteral",
+      "offset": 576,
+      "length": 27,
+      "value": "\"com.vusion.ios.Geofencing\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/rest\/VCloudRestClient.swift",
+      "kind": "StringLiteral",
+      "offset": 615,
+      "length": 18,
+      "value": "\"VCloudRestClient\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/Device.swift",
+      "kind": "Array",
+      "offset": 115,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/GeoLocationingProximityCloudAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 145,
+      "length": 27,
+      "value": "\"com.vusion.ios.geofencing\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/GeoLocationingProximityCloudAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 184,
+      "length": 25,
+      "value": "\"GeoLocationingProximity\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/Beacon.swift",
+      "kind": "IntegerLiteral",
+      "offset": 160,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/Beacon.swift",
+      "kind": "Array",
+      "offset": 189,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/Beacon.swift",
+      "kind": "FloatLiteral",
+      "offset": 219,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/Beacon.swift",
+      "kind": "IntegerLiteral",
+      "offset": 253,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/Beacon.swift",
+      "kind": "IntegerLiteral",
+      "offset": 287,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/model\/Beacon.swift",
+      "kind": "BooleanLiteral",
+      "offset": 312,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/GeoLocationingProximity.swift",
+      "kind": "StringLiteral",
+      "offset": 137,
+      "length": 27,
+      "value": "\"com.vusion.ios.geofencing\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/GeoLocationingProximity.swift",
+      "kind": "StringLiteral",
+      "offset": 176,
+      "length": 25,
+      "value": "\"GeoLocationingProximity\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/GeoLocationingDeviceCloudAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 142,
+      "length": 27,
+      "value": "\"com.vusion.ios.geofencing\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/GeoLocationingDeviceCloudAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 181,
+      "length": 22,
+      "value": "\"GeoLocationingDevice\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/GeoLocationingDevice.swift",
+      "kind": "StringLiteral",
+      "offset": 134,
+      "length": 27,
+      "value": "\"com.vusion.ios.geofencing\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/GeoLocationingDevice.swift",
+      "kind": "StringLiteral",
+      "offset": 173,
+      "length": 22,
+      "value": "\"GeoLocationingDevice\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/beacon\/resolver\/ParserCommons.swift",
+      "kind": "StringLiteral",
+      "offset": 106,
+      "length": 34,
+      "value": "\"0123456789ABCDEFGHJKMNPQRSTVWXYZ\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/beacon\/resolver\/ParserCommons.swift",
+      "kind": "StringLiteral",
+      "offset": 192,
+      "length": 34,
+      "value": "\"23456789CFGHJMPQRVWXcfghjmpqrvwx\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/beacon\/resolver\/LinkIDData.swift",
+      "kind": "Array",
+      "offset": 72,
+      "length": 178,
+      "value": "[\"ED9\", \"EDA\", \"Y100\", \"Y200\", \"Y201\", \"Y202\", \"Y203\", \"Y204\", \"Y300\", \"Y400\", \"Y401\", \"Y402\", \"Y600\", \"Y700\", \"Z000\", \"XZM\", \"Y20M\", \"XZN\", \"Y500\", \"Y205\"]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/beacon\/resolver\/LinkIDData.swift",
+      "kind": "Array",
+      "offset": 302,
+      "length": 178,
+      "value": "[\"PMF\", \"PMG\", \"w322\", \"w422\", \"w423\", \"w424\", \"w425\", \"w426\", \"w522\", \"w622\", \"w623\", \"w624\", \"w822\", \"w922\", \"x222\", \"vxc\", \"w42c\", \"vxf\", \"w722\", \"w427\"]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/beacon\/resolver\/LinkIDData.swift",
+      "kind": "Array",
+      "offset": 518,
+      "length": 778,
+      "value": "[\"YCA9\", \"4Z1\", \"4Z0\", \"Z003\", \"Z001\", \"Z002\", \"Z005\", \"Y101\", \"Y102\", \"4H1\", \"4H4\", \"Y0Z1\", \"4H0\", \"4H2\", \"4H3\", \"4H5\", \"Y0Z0\", \"Y0ZG\", \"Y209\", \"Y201\", \"0G\", \"4J3\", \"4J5\", \"Y210\", \"4J0\", \"4J1\", \"4J2\", \"4J4\", \"Y206\", \"Y207\", \"Y208\", \"Y20D\", \"Y20E\", \"4K0\", \"Y20N\", \"Y414\", \"Y409\", \"Y501\", \"Y305\", \"Y306\", \"Y301\", \"Y302\", \"Y511\", \"Y303\", \"Y420\", \"Y40F\", \"Y40G\", \"Y40K\", \"4Q3\", \"Y41B\", \"Y40A\", \"Y415\", \"4Q0\", \"Y512\", \"Y408\", \"Y304\", \"Y307\", \"Y407\", \"Y40D\", \"Y40C\", \"Y40J\", \"Y406\", \"Y40B\", \"Y40H\", \"Y411\", \"Y410\", \"Y40E\", \"4R0\", \"Y41C\", \"Y41D\", \"Y502\", \"Y503\", \"Y601\", \"Y701\", \"Y611\", \"Y603\", \"Y604\", \"Y703\", \"Y602\", \"Y811\", \"Y810\", \"Y706\", \"Y800\", \"Y710\", \"Y704\", \"Y705\", \"Y900\", \"Y702\", \"Z004\"]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/SepiooTrendStrategy.swift",
+      "kind": "Array",
+      "offset": 130,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/SepiooTrendStrategy.swift",
+      "kind": "Dictionary",
+      "offset": 201,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/SepiooTrendStrategy.swift",
+      "kind": "Array",
+      "offset": 255,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/SepiooTrendStrategy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 297,
+      "length": 4,
+      "value": "4000"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/SepiooTrendStrategy.swift",
+      "kind": "StringLiteral",
+      "offset": 345,
+      "length": 27,
+      "value": "\"com.vusion.ios.Geofencing\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/SepiooTrendStrategy.swift",
+      "kind": "StringLiteral",
+      "offset": 384,
+      "length": 21,
+      "value": "\"SepiooTrendStrategy\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/beacon\/resolver\/CRC16.swift",
+      "kind": "IntegerLiteral",
+      "offset": 59,
+      "length": 6,
+      "value": "0x8005"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/SepiooLocationStrategy.swift",
+      "kind": "Array",
+      "offset": 338,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/SepiooLocationStrategy.swift",
+      "kind": "StringLiteral",
+      "offset": 439,
+      "length": 27,
+      "value": "\"com.vusion.ios.Geofencing\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/SepiooLocationStrategy.swift",
+      "kind": "StringLiteral",
+      "offset": 478,
+      "length": 19,
+      "value": "\"CoreBeaconManager\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/SepiooLocationStrategy.swift",
+      "kind": "Array",
+      "offset": 534,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/SepiooLocationStrategy.swift",
+      "kind": "StringLiteral",
+      "offset": 572,
+      "length": 38,
+      "value": "\"0000fc8c-0000-1000-8000-00805f9b34fb\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/SepiooLocationStrategy.swift",
+      "kind": "StringLiteral",
+      "offset": 646,
+      "length": 8,
+      "value": "\"Vusion\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/SepiooLocationStrategy.swift",
+      "kind": "BooleanLiteral",
+      "offset": 826,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/SepiooLocationStrategy.swift",
+      "kind": "StringLiteral",
+      "offset": 1629,
+      "length": 31,
+      "value": "\"com.vusion.ios.bluetoothQueue\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/beacon\/resolver\/BeaconDataResolver.swift",
+      "kind": "StringLiteral",
+      "offset": 921,
+      "length": 27,
+      "value": "\"com.vusion.ios.Geofencing\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/beacon\/resolver\/BeaconDataResolver.swift",
+      "kind": "StringLiteral",
+      "offset": 960,
+      "length": 20,
+      "value": "\"BeaconDataResolver\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/CouponingStrategy.swift",
+      "kind": "Array",
+      "offset": 125,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/CouponingStrategy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 167,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/CouponingStrategy.swift",
+      "kind": "StringLiteral",
+      "offset": 212,
+      "length": 27,
+      "value": "\"com.vusion.ios.Geofencing\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/CouponingStrategy.swift",
+      "kind": "StringLiteral",
+      "offset": 251,
+      "length": 19,
+      "value": "\"CouponingStrategy\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/CouponingStrategy.swift",
+      "kind": "StringLiteral",
+      "offset": 7103,
+      "length": 3,
+      "value": "\"-\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/CouponingStrategy.swift",
+      "kind": "StringLiteral",
+      "offset": 7117,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/CouponingStrategy.swift",
+      "kind": "Array",
+      "offset": 7234,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/CouponingStrategy.swift",
+      "kind": "FloatLiteral",
+      "offset": 7406,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/CouponingStrategy.swift",
+      "kind": "FloatLiteral",
+      "offset": 7464,
+      "length": 4,
+      "value": "10.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/CouponingStrategy.swift",
+      "kind": "FloatLiteral",
+      "offset": 7490,
+      "length": 4,
+      "value": "10.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/CouponingStrategy.swift",
+      "kind": "Array",
+      "offset": 7605,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/Framework\/VusionSDK\/VusionSDK\/Sources\/VusionSDK\/internal\/strategy\/CouponingStrategy.swift",
+      "kind": "Array",
+      "offset": 8236,
+      "length": 2,
+      "value": "[]"
+    }
+  ]
+}

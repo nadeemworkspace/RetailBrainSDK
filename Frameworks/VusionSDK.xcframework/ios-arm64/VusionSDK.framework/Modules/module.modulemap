@@ -1,0 +1,6 @@
+framework module VusionSDK {
+  umbrella header "VusionSDK.h"
+  export *
+
+  module * { export * }
+}
