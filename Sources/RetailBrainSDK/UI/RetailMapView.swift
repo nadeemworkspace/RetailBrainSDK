@@ -50,19 +50,15 @@ struct MapViewRepresentable: UIViewRepresentable {
 
 public struct RetailMapView: View {
     @StateObject private var viewModel: RetailMapViewModel
-    private let routingController: MapRoutingController
 
     public init(
-        routingController: MapRoutingController = MapRoutingController(),
         onMapLoaded: (() -> Void)? = nil,
         onLaunch: (() -> Void)? = nil,
         mapId: String? = nil,
         isMultiFloorMode: Bool = false
     ) {
-        self.routingController = routingController
         _viewModel = StateObject(
             wrappedValue: RetailMapViewModel(onMapLoaded: {
-                routingController.markMapReady()
                 onMapLoaded?()
                 onLaunch?()
             }, mapId: mapId, isMultiFloorMode: isMultiFloorMode)
@@ -89,8 +85,11 @@ public struct RetailMapView: View {
             }
         }
         .onAppear {
-            routingController.attach(viewModel: viewModel)
+            RetailBrainManager.current.attachMapViewModel(viewModel)
             viewModel.loadMap()
+        }
+        .onDisappear {
+            RetailBrainManager.current.detachMapViewModel(viewModel)
         }
     }
 }

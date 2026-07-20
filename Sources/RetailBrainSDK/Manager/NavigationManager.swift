@@ -97,6 +97,14 @@ public class NavigationManager {
             self.renderUserBlueDot(at: coordinate)
         }
     }
+
+    // Parallel flow: resolves target using Vusion aisle+module External ID.
+    public func placeUserBlueDotAtExternalID(aisle: String, module: String) {
+        resolveBlueDotCoordinate(forVusionAisle: aisle, module: module) { [weak self] coordinate in
+            guard let self, let coordinate else { return }
+            self.renderUserBlueDot(at: coordinate)
+        }
+    }
     
     // MARK: - User Interaction
     
@@ -906,6 +914,41 @@ public class NavigationManager {
                 completion(nil)
                 return
             }
+
+            self.resolveAccessiblePathCoordinate(for: destination, completion: completion)
+        }
+    }
+
+    // Same blue-dot flow as static item path; only destination lookup changes to External ID.
+    private func resolveBlueDotCoordinate(
+        forVusionAisle aisle: String,
+        module: String,
+        completion: @escaping (Coordinate?) -> Void
+    ) {
+        let externalID = ExternalIDBlueDotResolver.buildExternalID(aisle: aisle, module: module)
+        guard !externalID.isEmpty else {
+            completion(nil)
+            return
+        }
+
+        mapView.mapData.getByType(.space) { [weak self] (result: Result<[Space], Error>) in
+            guard let self else {
+                completion(nil)
+                return
+            }
+
+            guard case .success(let spaces) = result,
+                  let resolvedSpace = ExternalIDBlueDotResolver.resolveSpace(by: externalID, in: spaces) else {
+                completion(nil)
+                return
+            }
+
+            let destination = RouteDestination(
+                id: resolvedSpace.id,
+                name: resolvedSpace.name,
+                targets: [.space(resolvedSpace)],
+                floorIds: [resolvedSpace.floor]
+            )
 
             self.resolveAccessiblePathCoordinate(for: destination, completion: completion)
         }

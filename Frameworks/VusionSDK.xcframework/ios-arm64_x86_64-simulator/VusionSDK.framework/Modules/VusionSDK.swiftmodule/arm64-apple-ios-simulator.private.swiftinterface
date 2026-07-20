@@ -1,23 +1,24 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
 // swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name VusionSDK
-// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 import Combine
 import CommonCrypto
 import CoreBluetooth
+import Darwin
 import Foundation
 import Swift
+import UIKit
 @_exported import VusionSDK
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
-public struct BeaconNeighbour {
-  public init(key: Swift.String, beacons: [Swift.String])
-  public func equals(_ other: VusionSDK.BeaconNeighbour) -> Swift.Bool
+public struct Anchor {
 }
-public struct Neighbour {
-  public init(deviceId: Swift.String, shelf: Swift.String)
+public struct DiscoveredPosition {
+  public var discoveredPosition: Swift.String
+  public var discoveredItems: [VusionSDK.Item]
 }
 public struct Item {
   public var deviceId: Swift.String
@@ -28,31 +29,26 @@ public struct Item {
   public init(deviceId: Swift.String, rssi: Swift.Int, position: Swift.String)
   public init(deviceId: Swift.String, rssi: Swift.Int, position: Swift.String, productId: Swift.String, productDescription: Swift.String)
 }
-public protocol IEdgeSenseProximityLight {
-  func onProximityEntered(deviceId: Swift.String, proximityLevel: VusionSDK.DisplayProximity)
-  func onProximityExited(deviceId: Swift.String, proximityLevel: VusionSDK.DisplayProximity)
+public struct Neighbour {
+  public init(deviceId: Swift.String, shelf: Swift.String)
 }
-public struct DiscoveredPosition {
-  public var discoveredPosition: Swift.String
-  public var discoveredItems: [VusionSDK.Item]
+public enum LocationingStrategy {
+  case CouponingStrategy
+  case DefaultStrategy
+  case AnchorLocationStrategy
+  public static func == (a: VusionSDK.LocationingStrategy, b: VusionSDK.LocationingStrategy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
-public struct GeolocationingProperties {
-  public let properties: [Swift.String : Swift.Optional<Any>]
-  public let store: Swift.String
-  public let startBeaconing: Swift.Bool
-  public let beaconingInterval: Swift.Int?
-  public let beaconingDuration: Swift.Int?
-  public let locationingStrategy: VusionSDK.LocationingStrategy?
-  public let rssiClose: Swift.Int
-  public init(locationingStrategy: VusionSDK.LocationingStrategy)
-  public init(locationingStrategy: VusionSDK.LocationingStrategy, rssiClose: Swift.Int)
-  public init(properties: [Swift.String : Any?], locationingStrategy: VusionSDK.LocationingStrategy, rssiClose: Swift.Int)
-  public init(properties: [Swift.String : Any?], locationingStrategy: VusionSDK.LocationingStrategy)
-  public init(properties: [Swift.String : Any?], store: Swift.String, locationingStrategy: VusionSDK.LocationingStrategy, rssiClose: Swift.Int)
-  public init(properties: [Swift.String : Any?], store: Swift.String, startBeaconing: Swift.Bool, beaconingInterval: Swift.Int?, beaconingDuration: Swift.Int?, locationingStrategy: VusionSDK.LocationingStrategy, rssiClose: Swift.Int)
-}
-public protocol IEdgeSenseDeviceLight {
-  func deviceRssiReceived(deviceId: Swift.String, rssi: Swift.Int)
+public enum NeighbourDetectionStrategy {
+  case EnableAllLabelsDetection, DEFAULT
+  public static func == (a: VusionSDK.NeighbourDetectionStrategy, b: VusionSDK.NeighbourDetectionStrategy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 public enum DisplayDirection {
   case STANDING, APPROACHING, LEAVING
@@ -78,65 +74,82 @@ public enum ProximityLevel {
     get
   }
 }
-public class GeoLocationingProximityCloudAPI : VusionSDK.BaseGeoLocationing {
-  public init(callback: any VusionSDK.IEdgeSenseProximityLight, proximityConfig: VusionSDK.ProximityConfig, vCloudConnection: VusionSDK.VCloudConnection, flashConfigClose: VusionSDK.FlashConfig, flashConfigNear: VusionSDK.FlashConfig)
-  public func locateMe(beacons: [VusionSDK.BeaconNeighbour]) -> Swift.Int
-  public func stopLocationing()
-  public func updateBeacons(beacons: [Swift.String])
-  @objc deinit
-}
-public enum NeighbourDetectionStrategy {
-  case EnableAllLabelsDetection, DEFAULT
-  public static func == (a: VusionSDK.NeighbourDetectionStrategy, b: VusionSDK.NeighbourDetectionStrategy) -> Swift.Bool
+public enum GeolocationingPropertiesValidationError : Swift.Error {
+  case invalidRssiAisleFilter
+  public static func == (a: VusionSDK.GeolocationingPropertiesValidationError, b: VusionSDK.GeolocationingPropertiesValidationError) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
 }
-public class GeoLocationingProximity : VusionSDK.BaseGeoLocationing {
-  public init(callback: any VusionSDK.IEdgeSenseProximityLight, proximityConfig: VusionSDK.ProximityConfig)
-  public func locateMe(beacons: [VusionSDK.BeaconNeighbour]) -> Swift.Int
-  public func stopLocationing()
-  public func updateBeacons(beacons: [Swift.String])
-  @objc deinit
-}
-public struct Anchor {
-}
-public enum LocationingStrategy {
-  case CouponingStrategy, DefaultStrategy, AnchorLocationStrategy
-  public static func == (a: VusionSDK.LocationingStrategy, b: VusionSDK.LocationingStrategy) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+public struct GeolocationingProperties {
+  public var properties: [Swift.String : Swift.Optional<Any>]
+  public var store: Swift.String
+  public var startBeaconing: Swift.Bool
+  public var startSmartBeaconing: Swift.Bool
+  public var beaconingInterval: Swift.Int?
+  public var beaconingDuration: Swift.Int?
+  public var aisleDetectionInterval: Swift.Int64
+  public var hysteresisDb: Swift.Double
+  public var rssiAisleFilter: Swift.Int {
     get
   }
-}
-public class GeoLocationingDeviceCloudAPI : VusionSDK.BaseGeoLocationing {
-  public init(callback: any VusionSDK.IEdgeSenseDeviceLight, proximityConfig: VusionSDK.ProximityConfig)
-  public func locateMe(beacons: [VusionSDK.BeaconNeighbour]) -> Swift.Int
-  public func stopLocationing()
-  public func updateBeacons(beacons: [Swift.String])
-  public func positionDiscovered(discoveredPosition: [VusionSDK.DiscoveredPosition])
-  public func deviceRssiReceived(deviceId: Swift.String, parent: Swift.String, rssi: Swift.Int)
-  @objc deinit
-}
-public class GeoLocationingDevice : VusionSDK.BaseGeoLocationing {
-  public init(callback: any VusionSDK.IEdgeSenseDeviceLight, proximityConfig: VusionSDK.ProximityConfig)
-  public func locateMe(beacons: [VusionSDK.BeaconNeighbour]) -> Swift.Int
-  public func stopLocationing()
-  public func updateBeacons(beacons: [Swift.String])
-  public func positionDiscovered(discoveredPosition: [VusionSDK.DiscoveredPosition])
-  public func deviceRssiReceived(deviceId: Swift.String, parent: Swift.String, rssi: Swift.Int)
-  @objc deinit
-}
-public class BaseGeoLocationing {
+  public var locationingStrategy: VusionSDK.LocationingStrategy?
+  public var rssiClose: Swift.Int
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var region: VusionSDK.GeoLocationingRegion? {
+    get
+    set
+  }
+  #endif
   public init()
-  public func updateBeaconAndNeighbours(beacons: [VusionSDK.BeaconNeighbour])
-  @objc deinit
+  public init(locationingStrategy: VusionSDK.LocationingStrategy)
+  public init(locationingStrategy: VusionSDK.LocationingStrategy, rssiClose: Swift.Int)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(properties: [Swift.String : Any?], locationingStrategy: VusionSDK.LocationingStrategy, rssiClose: Swift.Int)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(properties: [Swift.String : Any?], locationingStrategy: VusionSDK.LocationingStrategy)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(properties: [Swift.String : Any?], store: Swift.String, locationingStrategy: VusionSDK.LocationingStrategy, rssiClose: Swift.Int)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(properties: [Swift.String : Any?], store: Swift.String, startBeaconing: Swift.Bool, beaconingInterval: Swift.Int?, beaconingDuration: Swift.Int?, locationingStrategy: VusionSDK.LocationingStrategy, rssiClose: Swift.Int)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, deprecated, message: "Use initializers with properties/locationingStrategy for iOS SDK behavior.")
+  public init(store: Swift.String, startSmartBeaconing: Swift.Bool, beaconingInterval: Swift.Int?, aisleDetectionInterval: Swift.Int64, hysteresisDb: Swift.Double)
+  #endif
+  public init(aisleDetectionInterval: Swift.Int64, hysteresisDb: Swift.Double)
+  public mutating func setProperties(properties: [Swift.String : Any])
+  public func getAisleDetectionInterval() -> Swift.Int64
+  public func getRssiAisleFilter() -> Swift.Int
+  #if compiler(>=5.3) && $NonescapableTypes
+  public mutating func setRssiAisleFilter(_ rssiAisleFilter: Swift.Int?) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getRegion() -> VusionSDK.GeoLocationingRegion?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public mutating func setRegion(_ region: VusionSDK.GeoLocationingRegion?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getStoreId() -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public mutating func setStoreId(_ storeId: Swift.String?)
+  #endif
 }
-public struct VCloudConnection {
+public struct BeaconNeighbour {
+  public init(key: Swift.String, beacons: [Swift.String])
+  public func equals(_ other: VusionSDK.BeaconNeighbour) -> Swift.Bool
 }
-public struct ProximityConfig {
-  public init(rssiClose: Swift.Int, rssiNear: Swift.Int)
+public struct FlashConfig {
+  public var color: Swift.String
+  public var pattern: VusionSDK.FlashPattern
+  public var duration: Swift.Int
+  public init(duration: Swift.Int = 10, pattern: VusionSDK.FlashPattern = .FLASH_4_TIMES, color: Swift.String = "")
 }
 public enum FlashPattern {
   case FLASH_4_TIMES, EACH_1_SECOND, EACH_2_SECONDS, EACH_4_SECONDS
@@ -146,17 +159,368 @@ public enum FlashPattern {
     get
   }
 }
-public struct FlashConfig {
+public struct GeoLocationingAnchor : Swift.Codable, Swift.Equatable {
+  public let id: Swift.String
+  public let type: Swift.String?
+  public let aisleName: Swift.String?
+  public let modularName: Swift.String?
+  public let floorName: Swift.String?
+  public let department: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(id: Swift.String, type: Swift.String? = nil, aisleName: Swift.String? = nil, modularName: Swift.String? = nil, floorName: Swift.String? = nil, department: Swift.String? = nil)
+  #endif
+  public static func == (a: VusionSDK.GeoLocationingAnchor, b: VusionSDK.GeoLocationingAnchor) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
+public enum GeoLocationingRegion : Swift.String {
+  case eu
+  case america
+  case dev
+  case qa
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func fromValue(_ value: Swift.String?) -> VusionSDK.GeoLocationingRegion?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct LabelSearchConfig {
+  public static let defaultSort: Swift.String
+  public static let defaultPage: Swift.Int
+  public static let defaultPageSize: Swift.Int
+  public static let defaultIncludes: [Swift.String]
+  public var sort: Swift.String
+  public var page: Swift.Int
+  public var pageSize: Swift.Int
+  public var includes: [Swift.String]
+  public init(sort: Swift.String = LabelSearchConfig.defaultSort, page: Swift.Int = LabelSearchConfig.defaultPage, pageSize: Swift.Int = LabelSearchConfig.defaultPageSize, includes: [Swift.String] = LabelSearchConfig.defaultIncludes)
+}
+public struct LabelSearchMatchingItem : Swift.Codable {
+  public let itemId: Swift.String?
+  public let name: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct LabelSearchMatching : Swift.Codable {
+  public let items: [VusionSDK.LabelSearchMatchingItem]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct LabelSearchLocation : Swift.Codable {
+  public let geolocationSource: Swift.String?
+  public let level: Swift.Int?
+  public let anchorRadioId: Swift.String?
+  public let aisleId: Swift.String?
+  public let floorId: Swift.String?
+  public let aisleDescription: Swift.String?
+  public let aisleName: Swift.String?
+  public let modularName: Swift.String?
+  public let floorName: Swift.String?
+  public let position: Swift.String?
+  public let locationDate: Swift.String?
+  public let department: Swift.String?
+  public let modularId: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct LabelSearchValue : Swift.Codable {
+  public let labelId: Swift.String?
+  public let storeId: Swift.String?
+  public let matching: VusionSDK.LabelSearchMatching?
+  public let location: VusionSDK.LabelSearchLocation?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct LabelSearchQuerySort : Swift.Codable {
+  public let field: Swift.String
+  public let order: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(field: Swift.String, order: Swift.String?)
+  #endif
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct LabelSearchQuery : Swift.Codable {
+  public let search: Swift.String?
+  public let includes: [Swift.String]?
+  public let sort: [VusionSDK.LabelSearchQuerySort]?
+  public let pageSize: Swift.Int?
+  public let page: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct LabelSearchResponse : Swift.Codable {
+  public let query: VusionSDK.LabelSearchQuery?
+  public let count: Swift.Int?
+  public let values: [VusionSDK.LabelSearchValue]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ProximityConfig {
+  public init(rssiClose: Swift.Int, rssiNear: Swift.Int)
+}
+public protocol VCloudConnection {
+  var vCloudUrl: Swift.String { get set }
+  var token: Swift.String { get set }
+  var store: Swift.String { get set }
+  var apiHeader: [Swift.String : Swift.String] { get }
+}
+public struct VCloudConnectionAPIKey : VusionSDK.VCloudConnection {
+  public var vCloudUrl: Swift.String
+  public var token: Swift.String
+  public var store: Swift.String
+  public var apiHeader: [Swift.String : Swift.String] {
+    get
+  }
+  public init(vCloudUrl: Swift.String, token: Swift.String, store: Swift.String)
+}
+public struct VCloudConnectionSSO : VusionSDK.VCloudConnection {
+  public var vCloudUrl: Swift.String
+  public var token: Swift.String
+  public var store: Swift.String
+  public var apiHeader: [Swift.String : Swift.String] {
+    get
+  }
+  public init(vCloudUrl: Swift.String, token: Swift.String, store: Swift.String)
+}
+@available(*, deprecated, message: "Use VCloudConnectionAPIKey or VCloudConnectionSSO.")
+public struct VCloudConnectionRaw : VusionSDK.VCloudConnection {
+  public var vCloudUrl: Swift.String
+  public var token: Swift.String
+  public var store: Swift.String
+  public var header: [Swift.String : Swift.String]
+  public var apiHeader: [Swift.String : Swift.String] {
+    get
+  }
+  public init(vCloudUrl: Swift.String, token: Swift.String, store: Swift.String, apiHeader: [Swift.String : Swift.String] = [:])
+}
+public class BaseGeoLocationing {
+  public init()
+  public func updateBeaconAndNeighbours(beacons: [VusionSDK.BeaconNeighbour])
+  @objc deinit
+}
+public struct FrontModularConfig {
+  public let evaluationIntervalMs: Swift.Int64
+  public let windowMs: Swift.Int64
+  public let minSamples: Swift.Int
+  public let minMeanRssi: Swift.Int
+  public let marginToSecondDb: Swift.Int
+  public let strongSignalMarginDb: Swift.Int
+  public let stdevPenalty: Swift.Double
+  public let dwellWindows: Swift.Int
+  public let lostWindows: Swift.Int
+  public let restrictToLastKnownAisle: Swift.Bool
+  public init(evaluationIntervalMs: Swift.Int64 = 1200, windowMs: Swift.Int64 = 5000, minSamples: Swift.Int = 2, minMeanRssi: Swift.Int = -80, marginToSecondDb: Swift.Int = 2, strongSignalMarginDb: Swift.Int = 3, stdevPenalty: Swift.Double = 0.7, dwellWindows: Swift.Int = 2, lostWindows: Swift.Int = 3, restrictToLastKnownAisle: Swift.Bool = true)
+}
+public enum GeoLocationingDeviceError : Swift.Error, Swift.Equatable, Foundation.LocalizedError {
+  case smartBeaconingNotSupportedForCallerProvidedAnchors
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var errorDescription: Swift.String? {
+    get
+  }
+  #endif
+  public static func == (a: VusionSDK.GeoLocationingDeviceError, b: VusionSDK.GeoLocationingDeviceError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class GeoLocationingDevice : VusionSDK.BaseGeoLocationing {
+  convenience public init(callback: any VusionSDK.IEdgeSenseDeviceLight, geolocProperties: VusionSDK.GeolocationingProperties = GeolocationingProperties())
+  public init(callback: any VusionSDK.IEdgeSenseDeviceLight, proximityConfig: VusionSDK.ProximityConfig)
+  public func locateMe(beacons: [VusionSDK.BeaconNeighbour]) -> Swift.Int
+  public func locateMe(anchors: [VusionSDK.GeoLocationingAnchor]) throws -> Swift.Int
+  public func stopLocationing()
+  public func updateAnchors(_ anchors: [VusionSDK.GeoLocationingAnchor]) throws
+  public func updateBeacons(beacons: [Swift.String])
+  public func positionDiscovered(discoveredPosition: [VusionSDK.DiscoveredPosition])
+  public func deviceRssiReceived(deviceId: Swift.String, parent: Swift.String, rssi: Swift.Int)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func setFrontModularListener(cb: (any VusionSDK.IModularListener)?)
+  #endif
+  public func startFrontModularDetection(config: VusionSDK.FrontModularConfig = FrontModularConfig())
+  public func stopFrontModularDetection()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class GeoLocationingDeviceCloudAPI : VusionSDK.BaseGeoLocationing {
+  @available(*, deprecated, message: "Use init(callback:vCloudConnection:geolocProperties:) to align with Cloud API behavior.")
+  convenience public init(callback: any VusionSDK.IEdgeSenseDeviceLight, proximityConfig: VusionSDK.ProximityConfig)
+  convenience public init(callback: any VusionSDK.IEdgeSenseDeviceLight, proximityConfig: VusionSDK.ProximityConfig, vCloudConnection: any VusionSDK.VCloudConnection)
+  convenience public init(callback: any VusionSDK.IEdgeSenseDeviceLight, vCloudConnection: any VusionSDK.VCloudConnection, geolocProperties: VusionSDK.GeolocationingProperties = GeolocationingProperties(locationingStrategy: LocationingStrategy.AnchorLocationStrategy))
+  public func configureLogging(minLevel: VusionSDK.GeoLocationingLogLevel = .WARN)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func searchLabels(text: Swift.String, config: VusionSDK.LabelSearchConfig? = nil, completion: @escaping (Swift.Result<VusionSDK.LabelSearchResponse, any Swift.Error>) -> Swift.Void)
+  #endif
+  public func locateMe(beacons: [VusionSDK.BeaconNeighbour]) -> Swift.Int
+  @available(*, deprecated, renamed: "stopLocating()")
+  public func stopLocationing()
+  public func stopLocating()
+  public func destroy()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func setFrontModularListener(cb: (any VusionSDK.IModularListener)?)
+  #endif
+  public func startFrontModularDetection(config: VusionSDK.FrontModularConfig = FrontModularConfig())
+  public func stopFrontModularDetection()
+  public func startBeaconSimulationForStore(anchors: [VusionSDK.Anchor], rssiNear: Swift.Int = -55, rssiFar: Swift.Int = -85)
+  public func startBeaconSimulationForStore(rssiNear: Swift.Int = -55, rssiFar: Swift.Int = -85)
+  public func startFrontModularSimulationForStore(tickMs: Swift.Int64 = 200, switchModularEveryMs: Swift.Int64 = 3500, switchAisleEveryMs: Swift.Int64 = 14000, baseRssiFront: Swift.Int = -55, noiseDb: Swift.Int = 4)
+  public func positionDiscovered(discoveredPosition: [VusionSDK.DiscoveredPosition])
+  public func deviceRssiReceived(deviceId: Swift.String, parent: Swift.String, rssi: Swift.Int)
+  @objc deinit
+}
+public enum GeoLocationingLogLevel : Swift.Int {
+  case VERBOSE
+  case DEBUG
+  case INFO
+  case WARN
+  case ERROR
+  case NONE
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@available(*, deprecated, message: "Use GeoLocationingLogLevel.")
+public typealias Level = VusionSDK.GeoLocationingLogLevel
+public protocol GeoLocationingLogSink {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func log(level: VusionSDK.GeoLocationingLogLevel, tag: Swift.String, error: (any Swift.Error)?, message: Swift.String)
+  #endif
+}
+public enum GeoLocationingLogger {
+  public static var logger: any VusionSDK.GeoLocationingLogSink
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func v(_ tag: Swift.String, _ message: Swift.String, _ error: (any Swift.Error)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func d(_ tag: Swift.String, _ message: Swift.String, _ error: (any Swift.Error)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func i(_ tag: Swift.String, _ message: Swift.String, _ error: (any Swift.Error)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func w(_ tag: Swift.String, _ message: Swift.String, _ error: (any Swift.Error)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func e(_ tag: Swift.String, _ message: Swift.String, _ error: (any Swift.Error)? = nil)
+  #endif
+  public static func setMinLevel(_ level: VusionSDK.GeoLocationingLogLevel)
+  public static func getMinLevel() -> VusionSDK.GeoLocationingLogLevel
+}
+public struct OSLoggerSink : VusionSDK.GeoLocationingLogSink {
+  public init(subsystem: Swift.String = "com.vusion.ios.geofencing")
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func log(level: VusionSDK.GeoLocationingLogLevel, tag: Swift.String, error: (any Swift.Error)?, message: Swift.String)
+  #endif
+}
+public class GeoLocationingProximity : VusionSDK.BaseGeoLocationing {
+  public init(callback: any VusionSDK.IEdgeSenseProximityLight, proximityConfig: VusionSDK.ProximityConfig, storeId: Swift.String, region: VusionSDK.GeoLocationingRegion)
+  public func locateMe(beacons: [VusionSDK.BeaconNeighbour]) -> Swift.Int
+  public func stopLocationing()
+  public func updateBeacons(beacons: [Swift.String])
+  @objc deinit
+}
+public class GeoLocationingProximityCloudAPI : VusionSDK.BaseGeoLocationing {
+  public var sessionId: Swift.Int {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(callback: any VusionSDK.IEdgeSenseProximityLight, proximityConfig: VusionSDK.ProximityConfig, vCloudConnection: any VusionSDK.VCloudConnection, flashConfigClose: VusionSDK.FlashConfig? = nil, flashConfigNear: VusionSDK.FlashConfig? = nil)
+  #endif
+  public func locateMe(beacons: [VusionSDK.BeaconNeighbour]) -> Swift.Int
+  public func locateLabels(labelsIds: [Swift.String])
+  @available(*, deprecated, renamed: "stopLocating()")
+  public func stopLocationing()
+  public func stopLocating()
+  override public func updateBeaconAndNeighbours(beacons: [VusionSDK.BeaconNeighbour])
+  public func updateProximityLabels(labelsIds: [Swift.String])
+  public func updateBeacons(beacons: [Swift.String])
+  public func startProximitySimulationForStore(labels: [Swift.String])
+  public func destroy()
+  @objc deinit
+}
+public protocol IEdgeSenseDeviceLight {
+  func deviceRssiReceived(deviceId: Swift.String, rssi: Swift.Int)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func deviceRssiReceived(deviceId: Swift.String?, aisleName: Swift.String?, rssi: Swift.Int)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func deviceRssiReceived(deviceId: Swift.String?, aisleName: Swift.String?, modularName: Swift.String?, rssi: Swift.Int)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func nearestAisleUpdated(deviceId: Swift.String, aisleName: Swift.String?, rssi: Swift.Int)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func nearestModularUpdated(deviceId: Swift.String, aisleName: Swift.String?, modularName: Swift.String?, rssi: Swift.Int)
+  #endif
+  func deviceFlashed(deviceId: Swift.String)
+}
+extension VusionSDK.IEdgeSenseDeviceLight {
+  public func deviceRssiReceived(deviceId: Swift.String, rssi: Swift.Int)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func deviceRssiReceived(deviceId: Swift.String?, aisleName: Swift.String?, rssi: Swift.Int)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func deviceRssiReceived(deviceId: Swift.String?, aisleName: Swift.String?, modularName: Swift.String?, rssi: Swift.Int)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func nearestAisleUpdated(deviceId: Swift.String, aisleName: Swift.String?, rssi: Swift.Int)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func nearestModularUpdated(deviceId: Swift.String, aisleName: Swift.String?, modularName: Swift.String?, rssi: Swift.Int)
+  #endif
+  public func deviceFlashed(deviceId: Swift.String)
+}
+public protocol IEdgeSenseProximityLight {
+  func onProximityEntered(deviceId: Swift.String, proximityLevel: VusionSDK.DisplayProximity)
+  func onProximityExited(deviceId: Swift.String, proximityLevel: VusionSDK.DisplayProximity)
+  func onLabelFlashed(deviceId: Swift.String)
+}
+extension VusionSDK.IEdgeSenseProximityLight {
+  public func onLabelFlashed(deviceId: Swift.String)
+}
+public protocol IModularListener {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func frontModularUpdated(deviceId: Swift.String?, aisleName: Swift.String?, modularName: Swift.String?, meanRssi: Swift.Int, confidence: Swift.Float)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func frontModularLost(deviceId: Swift.String?, aisleName: Swift.String?, modularName: Swift.String?)
+  #endif
+}
+extension VusionSDK.IModularListener {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func frontModularUpdated(deviceId: Swift.String?, aisleName: Swift.String?, modularName: Swift.String?, meanRssi: Swift.Int, confidence: Swift.Float)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func frontModularLost(deviceId: Swift.String?, aisleName: Swift.String?, modularName: Swift.String?)
+  #endif
+}
+extension VusionSDK.LocationingStrategy : Swift.Equatable {}
+extension VusionSDK.LocationingStrategy : Swift.Hashable {}
+extension VusionSDK.NeighbourDetectionStrategy : Swift.Equatable {}
+extension VusionSDK.NeighbourDetectionStrategy : Swift.Hashable {}
 extension VusionSDK.DisplayDirection : Swift.Equatable {}
 extension VusionSDK.DisplayDirection : Swift.Hashable {}
 extension VusionSDK.DisplayProximity : Swift.Equatable {}
 extension VusionSDK.DisplayProximity : Swift.Hashable {}
 extension VusionSDK.ProximityLevel : Swift.Equatable {}
 extension VusionSDK.ProximityLevel : Swift.Hashable {}
-extension VusionSDK.NeighbourDetectionStrategy : Swift.Equatable {}
-extension VusionSDK.NeighbourDetectionStrategy : Swift.Hashable {}
-extension VusionSDK.LocationingStrategy : Swift.Equatable {}
-extension VusionSDK.LocationingStrategy : Swift.Hashable {}
+extension VusionSDK.GeolocationingPropertiesValidationError : Swift.Equatable {}
+extension VusionSDK.GeolocationingPropertiesValidationError : Swift.Hashable {}
 extension VusionSDK.FlashPattern : Swift.Equatable {}
 extension VusionSDK.FlashPattern : Swift.Hashable {}
+extension VusionSDK.GeoLocationingRegion : Swift.Equatable {}
+extension VusionSDK.GeoLocationingRegion : Swift.Hashable {}
+extension VusionSDK.GeoLocationingRegion : Swift.RawRepresentable {}
+extension VusionSDK.GeoLocationingDeviceError : Swift.Hashable {}
+extension VusionSDK.GeoLocationingLogLevel : Swift.Equatable {}
+extension VusionSDK.GeoLocationingLogLevel : Swift.Hashable {}
+extension VusionSDK.GeoLocationingLogLevel : Swift.RawRepresentable {}

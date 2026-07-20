@@ -14,7 +14,7 @@ public class ShoppingItemsProvider {
 
     public func setCustomItems(_ items: [ShoppingItem]) {
         self.customItems = items
-        RetailBrainManager.shared.delegate?.addProductToMap()
+        RetailBrainManager.current.handleProductsUpdated()
     }
 
     public func getItems() -> [ShoppingItem] {

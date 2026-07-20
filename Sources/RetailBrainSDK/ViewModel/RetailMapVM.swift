@@ -32,15 +32,17 @@ final class RetailMapViewModel: ObservableObject {
         DispatchQueue.main.async {
             self?.selectedStore = storeDetails
             if let storeDetails {
-                RetailBrainManager.shared.delegate?.didTapProductPointer(storeDetails)
+                RetailBrainManager.current.handleProductPointerTap(storeDetails)
             }
         }
     }
 
     func loadMap() {
-        guard let config = RetailBrainManager.shared.config else {
+        RetailBrainManager.current.loadMap()
+
+        guard let config = RetailBrainManager.current.config else {
             print("RetailBrain Config Missing")
-            RetailBrainManager.shared.delegate?.mapDidFailToLoad(error: RetailBrainSDKError.invalidConfiguration)
+            RetailBrainManager.current.handleMapLoadFailed(RetailBrainSDKError.invalidConfiguration)
             isLoading = false
             return
         }
@@ -103,13 +105,18 @@ final class RetailMapViewModel: ObservableObject {
 
                         self.isMapRendered = true
                         self.placeBlueDotIfReady()
-                        RetailBrainManager.shared.delegate?.mapDidLoad()
+                        
+                        // Start Vusion beaconing after map loads
+                        VusionIntegrationManager.shared.startAfterMapLoad()
+
+                        RetailBrainManager.current.handleMapDidLoad()
                         self.onMapLoaded?()
                         self.isLoading = false
+                        
                     case .failure(let error):
                         print("Map rendering failed")
                         print(error)
-                        RetailBrainManager.shared.delegate?.mapDidFailToLoad(error: error)
+                        RetailBrainManager.current.handleMapLoadFailed(error)
                         self.isLoading = false
                     }
                 }
@@ -117,7 +124,7 @@ final class RetailMapViewModel: ObservableObject {
             case .failure(let error):
                 print("Map Loading Failed")
                 print(error)
-                RetailBrainManager.shared.delegate?.mapDidFailToLoad(error: error)
+                RetailBrainManager.current.handleMapLoadFailed(error)
                 self.isLoading = false
             }
         }
@@ -136,9 +143,14 @@ final class RetailMapViewModel: ObservableObject {
         // Keep this static-product flow replaceable for future Vusion coordinates.
         selectedProductForBlueDot = itemNames.first
 
-        RetailBrainManager.shared.delegate?.routeCalculationStarted()
+        RetailBrainManager.current.handleRouteCalculationStarted()
         navigationManager.prepareToDrawRoute(destinationNames: itemNames)
         placeBlueDotIfReady()
+    }
+
+    func placeBlueDotAtVusionLocation(aisle: String, module: String) {
+        guard isMapRendered else { return }
+        navigationManager.placeUserBlueDotAtExternalID(aisle: aisle, module: module)
     }
 
     private func placeBlueDotIfReady() {
